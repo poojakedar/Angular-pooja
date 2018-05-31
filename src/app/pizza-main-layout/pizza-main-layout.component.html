@@ -1,0 +1,57 @@
+
+
+<mat-sidenav-container class="example-container">
+
+  <mat-sidenav mode="side" class="sidenav" opened>
+
+    <mat-button-toggle-group #group="matButtonToggleGroup" id="mtbt">
+      <mat-button-toggle (click)="search('Veg')" mat-raised-button id="Veg" value= "Veg">Veg</mat-button-toggle>
+      <mat-button-toggle (click)="search('Non Veg')" mat-raised-button id="Non Veg" value="Non Veg">Non Veg</mat-button-toggle>
+    </mat-button-toggle-group>
+    <br/>
+    <mat-slider min="100" [(ngModel)]="price" max="600" thumbLabel></mat-slider>
+    <br/>
+    <form>
+      <mat-form-field>
+        <mat-select (selectionChange)="searchT()" [(ngModel)]="selectedBase" placeholder="Favorite base"  name="base">
+          <mat-option    *ngFor="let base of bases" [value]="base.value">
+            {{base.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+  <br/>
+      <mat-form-field>
+        <mat-select (selectionChange)="searchT()" placeholder="Favorite type" [(ngModel)]="selectedType" name="type">
+          <mat-option *ngFor="let type of types" [value]="type.value">
+            {{type.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    </form>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+   
+ 
+    <mat-card *ngFor="let pizza of pizzas" class="example-card" class="example-card">
+      <mat-card-header>
+        <mat-card-title>{{ pizza.name | uppercase }} Details</mat-card-title>
+        <mat-card-subtitle>{{pizza.pizza}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <img width="150" src="{{pizza.image}}" alt="Photo of a Shiba Inu">
+        <ul class="list-place">
+          <li>{{pizza.base}}</li>
+          <li>{{pizza.type}}</li>
+          <li> {{pizza.price}}</li>
+        </ul>
+      </mat-card-content>
+      <mat-card-actions>
+        <button routerLink="/detail/{{pizza.id}}" mat-raised-button>More info</button>
+        <button routerLink="/detail/{{pizza.id}}" mat-raised-button>ADD</button>
+      </mat-card-actions>
+    </mat-card>
+ <!--    <router-outlet></router-outlet> -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
