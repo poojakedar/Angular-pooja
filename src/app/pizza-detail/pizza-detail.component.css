@@ -1,5 +1,16 @@
-.example-card {
-  max-width: 400px;
+
+.pizza-list {
+  display: inline-block;
+  position: relative;
+  top: -65px;
 }
 
+.pizza-card {
+  max-width: 450px;
+  margin: 2px;
+}
 
+.pizza-back-btn{
+	display: flex;
+	justify-content: flex-end;
+}

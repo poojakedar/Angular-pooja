@@ -1,30 +1,39 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-.example-container {
+.pizza-container {
   position: relative;
   top: 10;
   bottom: 0;
   left: 0;
   right: 0;
   background: #eee;
+  min-height: 500px;
 }
 
-.sidenav{
-  padding-top: 20px !important;*/
+.pizza-sidenav {
+  padding-top: 20px !important;
   padding-left: 20px;
   margin-top: 5px;
 }
-/** No CSS for this example */
+
 mat-slider {
   width: 300px;
 }
 
-.list-place{
-    display: inline-block;
-    position: relative;
-    top: -65px;
+.pizza-list {
+  display: inline-block;
+  position: relative;
+  top: -65px;
 }
-.example-card {
- max-width: 1000px;
+
+.pizza-card {
+  max-width: 500px;
   margin: 2px;
+}
+
+.pizza-card-bottom {
+  box-sizing: border-box;
+  width: 35%;
+  display: inline-block;
+  text-align: right;
 }

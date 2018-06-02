@@ -1,16 +1,19 @@
 
-<mat-card *ngIf="pizza" class="example-card">
+<mat-card *ngIf="pizza" class="pizza-card">
   <mat-card-header>
-    <mat-card-title>{{ pizza.name | uppercase }} Details</mat-card-title>
+    <mat-card-title><h3>{{ pizza.name | uppercase }} Details </h3></mat-card-title>
     <mat-card-subtitle>{{pizza.pizza}}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src="{{pizza.image}}" alt="Photo of a Shiba Inu">
-  <mat-card-content>
-     {{pizza.base}}
-     {{pizza.type}}
-     {{pizza.price}}
+  <img mat-card-image src="{{pizza.image}}" alt="Photo of pizza">
+  <mat-card-content >
+    <ul>
+      <li>Base: {{pizza.base}}</li>
+      <li>Type {{pizza.type}}</li>
+      <li>Price: {{pizza.price}}</li>
+    </ul>
+
   </mat-card-content>
-  <mat-card-actions>
-    <button (click)="goBack()" mat-button>Back</button>
+  <mat-card-actions class="pizza-back-btn">
+    <button (click)="goBack()" mat-raised-button>Back</button>
   </mat-card-actions>
 </mat-card>
