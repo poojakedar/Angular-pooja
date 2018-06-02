@@ -4,7 +4,7 @@
   <mat-sidenav mode="side" class="pizza-sidenav" opened>
     <mat-button-toggle-group #group="matButtonToggleGroup" id="mtbt">
       <mat-button-toggle (click)="setToggleValue('v')" mat-raised-button id="Veg" value="v">Veg</mat-button-toggle>
-      <mat-button-toggle (click)="setToggleValue('nv')" mat-raised-button id="NonVeg" value="n">Non Veg</mat-button-toggle>
+      <mat-button-toggle (click)="setToggleValue('n')" mat-raised-button id="NonVeg" value="n">Non Veg</mat-button-toggle>
     </mat-button-toggle-group>
     <br/><br/>
     <label for="price-range">Price Range</label><br/>
@@ -33,8 +33,8 @@
   <mat-sidenav-content>
 
     <mat-card *ngFor="let pizza of pizzas$ | async" class="pizza-card">
-      <mat-card-header>
-        <mat-card-title>{{ pizza.name | uppercase }} </mat-card-title>
+      <mat-card-header class="pizza-card-header">
+        <mat-card-title><h3>{{ pizza.name | uppercase }} </h3></mat-card-title>
 
       </mat-card-header>
       <mat-card-content>

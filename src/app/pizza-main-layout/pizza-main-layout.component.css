@@ -24,11 +24,13 @@ mat-slider {
   display: inline-block;
   position: relative;
   top: -65px;
+  left: 0px;
 }
 
 .pizza-card {
-  max-width: 500px;
+  max-width: 800px;
   margin: 2px;
+  border-bottom: 1px solid #c4c4d2;
 }
 
 .pizza-card-bottom {
@@ -36,4 +38,12 @@ mat-slider {
   width: 35%;
   display: inline-block;
   text-align: right;
+}
+
+.mat-button-toggle-checked {
+  background-color: #a0c2e4 !important;
+}
+
+.pizza-card-header {
+  justify-content: center !important;
 }
