@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
 
 # Steps to install
-git clone https://github.com/poojakedar/my-pizza-online-order.git 
+git clone https://github.com/poojakedar/Angular-pooja.git 
 
 npm install
 
